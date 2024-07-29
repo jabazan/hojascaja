@@ -1,0 +1,69 @@
+body{
+    font-family: sans-serif
+}
+#ccajaform{
+    margin: 5px;
+}
+
+#container{
+    position: relative; 
+    width: 360px;
+    height: 640px;
+    border: black 0.5px solid;
+    background: #FFFFFF;
+}
+
+h1{
+    text-align:center;
+    margin: auto 15px 15px;
+    color: darkslateblue;
+}
+
+form#container{
+    margin: left 5px;
+}
+
+input{
+    margin: 2px;
+    width: 40px;
+}
+
+.ingreso_datos{
+    margin: 2px;
+    width: 60px;
+}
+
+
+#pe{
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+#ccajaform{
+    display: flexbox;
+}
+
+#calcular{
+    width: 150px;
+    margin: 25px 50px 15px 130px;
+}
+
+#enviar{
+    width: 120px;
+    margin: 25px 50px 15px 130px;
+}
+
+label#pe{
+    font-weight: bold;
+    margin: right 20px;
+}
+
+#resultado{
+    font-size:larger;
+    font-weight:bold;
+    margin-top: 20px;
+}
+
+#fecha{
+    width: 150px;
+}
