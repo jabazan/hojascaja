@@ -57,5 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#arqueocaja input').forEach(function(element) {
         element.addEventListener('keyup', arqueo_caja);
     });
+    document.getElementById('cierreCajaForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Previene el envío normal del formulario
+        
+        // Realiza los cálculos finales antes de enviar
+        calcular_venta_ef();
+        arqueo_caja();
+        calc_difCaja();
 
+        // Envía el formulario usando Fetch API
+        fetch('procesar_cierre.php', {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data); // Muestra la respuesta del servidor
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
 });
