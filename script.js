@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    fecha.max = new Date().toISOString().split('T')[0];
+
     function calcular_venta_ef() {
         var cajaInicial = parseFloat(document.getElementById('vn_ci').value) || 0;
         var cierreZ = parseFloat(document.getElementById('vn_cz').value) || 0;
@@ -54,4 +57,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('#arqueocaja input').forEach(function(element) {
         element.addEventListener('keyup', arqueo_caja);
     });
+
 });

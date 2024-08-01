@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
 }
 #container {
+    position: relative;
     width: 100%;
     max-width: 480px;
     background: #ffffff;
@@ -17,31 +18,17 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-#ingreso_datos {
-    flex-basis: calc(50% - 5px);
-    display: vertical ;
-    align-items: right;
-    margin-bottom: 5px;
-}
-#ingreso_datos label {
-    flex: 0 0 50px;
-    font-size: 14px;
-    margin-right: 5px;
-    text-align: right;
-}
-#ingreso_datos input[type="number"] {
-    flex: 1;
-    padding: 5px;
-    font-size: 14px;
-    width: auto;
-    align-items: left;
-}
 
 h1 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 20px;
+    font-size: 22px;
 }
+h4 {
+    background-color:#bdc3c7
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -55,11 +42,12 @@ label {
     color: #34495e;
 }
 select, input[type="date"], input[type="number"] {
-    width: 100%;
-    padding: 10px;
+    width: auto;
+    padding: 5px;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 .section-title {
     background-color: #3498db;
@@ -96,28 +84,46 @@ input[type="submit"]:hover {
     background-color: #2e63cc;
 }
 
+#ingreso_datos .container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    
+}
+#ingreso_datos label {
+    font-size: 14px;
+    margin-right: 5px;
+    
+
+}
+#ingreso_datos input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
+    width: 80px;
+}
+
+
 #arqueocaja {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 #arqueocaja .form-group {
-    flex-basis: calc(50% - 5px);
     display: flex;
     align-items: center;
     margin-bottom: 5px;
 }
 #arqueocaja label {
-    flex: 0 0 50px;
+    flex: 0 0 20px;
     font-size: 14px;
-    margin-right: 5px;
+    margin-right: 1px;
     text-align: right;
 }
 #arqueocaja input[type="number"] {
     flex: 1;
     padding: 5px;
     font-size: 14px;
-    width: auto;
+    width: 30px;
 }
 
 /* Media query para pantallas más pequeñas */
@@ -134,4 +140,9 @@ input[type="submit"]:hover {
     margin-top: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+#contenedor_boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

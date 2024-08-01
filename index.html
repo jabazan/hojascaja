@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id='container'>
-        <h1>Resumen Cierre Caja</h1>
+        <h1>Cierre Caja Sucursales</h1>
         <form name='ccajaform' id='ccajaform' method='get' action='https://script.google.com/macros/s/AKfycbyF5_L0-OrCmTPCy8UwKLyDx21_9MzrDUNaIgDJbh4vIu-YkrQYO4DLeXCkPhYutcBO/exec'>
             <div id='Sucursal'> 
                 <label for='sucursal'>Sucursal:</label> &nbsp; 
@@ -51,8 +51,9 @@
                 </select><br>
             </div>
             
-            <h4>Ingresar datos:</h4>
+            
             <div id='ingreso_datos' class='container_caja'>
+                <h4>Ingresar datos:</h4>
                 <label required>Caja Inicial:</label><input class='ingreso_datos' type='number' name='cajaInicial' id='vn_ci' required><br>
                 <label>Cierre Z:</label><input class='ingreso_datos' type='number' name='cierreZ' id='vn_cz'required><br>
                 <label>Gastos:</label><input class='ingreso_datos' type='number' name='gastos' id='vn_ga'><br>
@@ -107,11 +108,15 @@
                 <strong>Total Efectivo e Caja: </strong> <strong id='total_arqueo' style='color:green'></strong><br>
                 <input type="hidden" name="total_arqueo_input" id="total_arqueo_input">
             </div>
+
             <div id='resultado'>
                 <label>Diferencia Efectivo =</label><strong id='dif_caja'></strong><br>
                 <input type="hidden" name="dif_caja_input" id="dif_caja_input">
+            </div>
+            <div id="contenedor_boton">
                 <input type='submit' name='enviar' id='enviar'>
             </div>
+            
         </form>
     </div>
 </body>
