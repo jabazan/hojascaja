@@ -42,7 +42,7 @@ label {
     color: #34495e;
 }
 select, input[type="date"], input[type="number"] {
-    width: auto;
+    width:max-content;
     padding: 5px;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
@@ -124,13 +124,6 @@ input[type="submit"]:hover {
     padding: 5px;
     font-size: 14px;
     width: 30px;
-}
-
-/* Media query para pantallas más pequeñas */
-@media (max-width: 480px) {
-    #arqueocaja .form-group {
-        flex-basis: 100%;
-    }
 }
 
 #resultado {
