@@ -17,6 +17,26 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+#ingreso_datos {
+    flex-basis: calc(50% - 5px);
+    display: vertical ;
+    align-items: right;
+    margin-bottom: 5px;
+}
+#ingreso_datos label {
+    flex: 0 0 50px;
+    font-size: 14px;
+    margin-right: 5px;
+    text-align: right;
+}
+#ingreso_datos input[type="number"] {
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    width: auto;
+    align-items: left;
+}
+
 h1 {
     text-align: center;
     color: #2c3e50;
