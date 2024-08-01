@@ -39,6 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('dif_caja').innerText = difCaja.toFixed(2);
         document.getElementById('dif_caja_input').value = difCaja.toFixed(2);
+
+       if (difCaja<0) {
+        document.getElementById('dif_caja').style.color='red';
+       } else {
+        document.getElementById('dif_caja').style.color='green';
+       }
     }
 
     document.querySelectorAll('.ingreso_datos').forEach(function(element) {
