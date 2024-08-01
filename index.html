@@ -12,7 +12,7 @@
 <body>
     <div id='container'>
         <h1>Cierre Caja Sucursales</h1>
-        <form name='ccajaform' id='ccajaform' method='get' action='https://script.google.com/macros/s/AKfycbyF5_L0-OrCmTPCy8UwKLyDx21_9MzrDUNaIgDJbh4vIu-YkrQYO4DLeXCkPhYutcBO/exec'>
+        <form id="cierreCajaForm" action="procesar_cierre.php" method="POST">
             <div id='Sucursal'> 
                 <label for='sucursal'>Sucursal:</label> &nbsp; 
                 <select name='sucursal' id='sucursal'required>
@@ -114,9 +114,8 @@
                 <input type="hidden" name="dif_caja_input" id="dif_caja_input">
             </div>
             <div id="contenedor_boton">
-                <input type='submit' name='enviar' id='enviar'>
+                <button type="submit" id="enviarButton">Enviar</button>
             </div>
-            
         </form>
     </div>
 </body>
