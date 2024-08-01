@@ -14,7 +14,8 @@
         <form name='ccajaform' id='ccajaform' method='get' action='https://script.google.com/macros/s/AKfycbyF5_L0-OrCmTPCy8UwKLyDx21_9MzrDUNaIgDJbh4vIu-YkrQYO4DLeXCkPhYutcBO/exec'>
             <div id='Sucursal'> 
                 <label for='sucursal'>Sucursal:</label> &nbsp; 
-                <select name='sucursal' id='sucursal'>
+                <select name='sucursal' id='sucursal'required>
+                    <option value="" disabled selected>Seleccione una sucursal</option>
                     <option value='9 de Julio'>9 de Julio</option>
                     <option value='España'>España</option>
                     <option value='Espejo'>Espejo</option>
@@ -25,9 +26,10 @@
                     <option value='Leguizamon'>Leguizamon</option>
                     <option value='Paso de los Andes'>Paso de los Andes</option>
                 </select><br>
-                <label>Fecha:</label> &nbsp;<input class='ingreso_datos' type='date' name='fecha' id='fecha'><br>
-                <label for='responsable'>Responsable de caja:</label>&nbsp; 
+                <label>Fecha:</label> &nbsp;<input class='ingreso_datos' type='date' name='fecha' id='fecha' required><br>
+                <label for='responsable'required>Responsable de caja:</label>&nbsp; 
                 <select name='responsable' id='responsable'>
+                    <option value="" disabled selected>Indique responsable</option>
                     <option value='CERECEDA, MARCELA'>CERECEDA, MARCELA</option>
                     <option value='CHAPARRO, MARIELA'>CHAPARRO, MARIELA</option>
                     <option value='CONTRERAS, VIRGINIA'>CONTRERAS, VIRGINIA</option>
@@ -50,12 +52,12 @@
             
             <h4>Ingresar datos:</h4>
             <div id='ingreso_datos' class='container_caja'>
-                <label>Caja Inicial:</label><input class='ingreso_datos' type='number' name='cajaInicial' id='vn_ci'><br>
-                <label>Cierre Z:</label><input class='ingreso_datos' type='number' name='cierreZ' id='vn_cz'><br>
+                <label required>Caja Inicial:</label><input class='ingreso_datos' type='number' name='cajaInicial' id='vn_ci' required><br>
+                <label>Cierre Z:</label><input class='ingreso_datos' type='number' name='cierreZ' id='vn_cz'required><br>
                 <label>Gastos:</label><input class='ingreso_datos' type='number' name='gastos' id='vn_ga'><br>
-                <label>Tarjetas:</label><input class='ingreso_datos' type='number' name='tarjetas' id='vn_ta'><br>
-                <label>Mercado Pago:</label><input class='ingreso_datos' type='number' name='mp' id='vn_mp'><br>
-                <label>Caja Inicial próximo día:</label><input class='ingreso_datos' type='number' name='vn_prox_dia' id='vn_cpd'><br>
+                <label>Tarjetas:</label><input class='ingreso_datos' type='number' name='tarjetas' id='vn_ta'required><br>
+                <label>Mercado Pago:</label><input class='ingreso_datos' type='number' name='mp' id='vn_mp'required><br>
+                <label>Caja Inicial próximo día:</label><input class='ingreso_datos' type='number' name='vn_prox_dia' id='vn_cpd'required><br>
                 <strong>Venta en Efectivo: </strong> <strong id='venta_ef' style='color: blue'></strong>
                 <input type="hidden" name="venta_ef_input" id="venta_ef_input">
             </div>
