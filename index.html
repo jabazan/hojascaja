@@ -51,16 +51,18 @@
                 </select><br>
             </div>
             
-            
+
             <div id='ingreso_datos' class='container_caja'>
                 <h4>Ingresar datos:</h4>
                 <label required>Caja Inicial:</label><input class='ingreso_datos' type='number' name='cajaInicial' id='vn_ci' required><br>
+                <label required>Parcial Anterior:</label><input class='ingreso_datos' type='number' name='parcialAnterior' id='par_ant' required><br>
                 <label>Cierre Z:</label><input class='ingreso_datos' type='number' name='cierreZ' id='vn_cz'required><br>
                 <label>Gastos:</label><input class='ingreso_datos' type='number' name='gastos' id='vn_ga'><br>
                 <label>Tarjetas:</label><input class='ingreso_datos' type='number' name='tarjetas' id='vn_ta'required><br>
                 <label>Mercado Pago:</label><input class='ingreso_datos' type='number' name='mp' id='vn_mp'required><br>
                 <label>Caja Inicial próximo día:</label><input class='ingreso_datos' type='number' name='vn_prox_dia' id='vn_cpd'required><br>
                 <br>
+                <strong>Venta Total: </strong> <strong id='ventaTotal' style='color: blue'></strong>
                 <strong>Venta en Efectivo: </strong> <strong id='venta_ef' style='color: blue'></strong>
                 <input type="hidden" name="venta_ef_input" id="venta_ef_input">
             </div>
@@ -105,7 +107,7 @@
                         <input type='number' name='pe10000' id='pe10000'>
                     </div>
                 </div>
-                <strong>Total Efectivo e Caja: </strong> <strong id='total_arqueo' style='color:green'></strong><br>
+                <strong>Total Efectivo en Caja: $ </strong> <strong id='total_arqueo' style='color:green'></strong><br>
                 <input type="hidden" name="total_arqueo_input" id="total_arqueo_input">
             </div>
 

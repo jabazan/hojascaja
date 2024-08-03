@@ -4,15 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function calcular_venta_ef() {
         var cajaInicial = parseFloat(document.getElementById('vn_ci').value) || 0;
+        var parcialAnterior = parseFloat(document.getElementById('par_ant').value) || 0;
         var cierreZ = parseFloat(document.getElementById('vn_cz').value) || 0;
         var gastos = parseFloat(document.getElementById('vn_ga').value) || 0;
         var tarjetas = parseFloat(document.getElementById('vn_ta').value) || 0;
         var mp = parseFloat(document.getElementById('vn_mp').value) || 0;
         var proxDia = parseFloat(document.getElementById('vn_cpd').value) || 0;
 
+        var ventaTotal = cierreZ - parcialAnterior;
         var ventaEfectivo = cierreZ - (cajaInicial + gastos + tarjetas + mp - proxDia);
-        document.getElementById('venta_ef').innerText = ventaEfectivo.toFixed(2);
-        document.getElementById('venta_ef_input').value = ventaEfectivo.toFixed(2);
+        document.getElementById('ventaTotal').innerText = '$ '+ ventaTotal.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ '.-';
+        document.getElementById('venta_ef').innerText = '$ '+ ventaEfectivo.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ '.-';
+        document.getElementById('venta_ef_input').value = '$ '+ ventaEfectivo.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ '.-';
 
         calc_difCaja();
     }
@@ -40,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var totalArqueo = parseFloat(document.getElementById('total_arqueo').innerText) || 0;
         var difCaja = totalArqueo - ventaEfectivo;
 
-        document.getElementById('dif_caja').innerText = difCaja.toFixed(2);
-        document.getElementById('dif_caja_input').value = difCaja.toFixed(2);
+        document.getElementById('dif_caja').innerText = '$ '+ difCaja.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ '.-';
+        document.getElementById('dif_caja_input').value = '$ '+ difCaja.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ '.-';
 
        if (difCaja<0) {
         document.getElementById('dif_caja').style.color='red';
