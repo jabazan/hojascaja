@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var ventaTotal = cierreZ - parcialAnterior;
     var ventaEfectivo =
-      cierreZ - (cajaInicial + gastos + tarjetas + mp - proxDia);
+      cierreZ -
+      parcialAnterior -
+      (cajaInicial + gastos + tarjetas + mp - proxDia);
     document.getElementById("ventaTotal").innerText = ventaTotal.toFixed(2);
     document.getElementById("venta_ef").innerText = ventaEfectivo.toFixed(2);
     document.getElementById("venta_ef_input").value = ventaEfectivo.toFixed(2);
