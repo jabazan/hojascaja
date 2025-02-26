@@ -98,7 +98,16 @@ table {
     font-size: 13px; /* Reducimos tamaño de fuente */
 }
 
-th, td {
+th{
+    padding: 2px 5px; /* Menos espacio en celdas */
+    border: 1px solid #ddd;
+    text-align: center;
+    max-width: 10px; /* Limita el tamaño de cada celda */
+    overflow: hidden;
+    background-color: rgb(175, 211, 248);
+}
+
+td {
     padding: 2px 5px; /* Menos espacio en celdas */
     border: 1px solid #ddd;
     text-align: center;

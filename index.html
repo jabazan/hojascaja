@@ -36,7 +36,7 @@
                      <th colspan="4" scope="colgroup">Parciales</th>
                   </tr>
                   <tr>
-                    <th>Concepto</th>
+                    <td></td>
                     <td>Parcial 1</td>
                     <td>Parcial 2</td>
                     <td>Parcial 3</td>
@@ -170,53 +170,109 @@
             </div>
             
             <div id='sectorarqueo'>
-                <h4>Arqueo Caja:</h4>
-                <div id='arqueocaja'>  
-                    <div class="form-group">
-                        <label>$10:</label>
-                        <input type='number' name='pe10' id='pe10'>    
-                    </div>
-                    <div class="form-group">
-                        <label>$20:</label>
-                        <input type='number' name='pe20' id='pe20'>
-                    </div>
-                    <div class="form-group">
-                        <label>$50:</label>
-                        <input type='number' name='pe50' id='pe50'>
-                    </div>
-                    <div class="form-group">
-                        <label>$100:</label>
-                        <input type='number' name='pe100' id='pe100'>
-                    </div>
-                    <div class="form-group">
-                        <label>$200:</label>
-                        <input type='number' name='pe200' id='pe200'> 
-                    </div>
-                    <div class="form-group">
-                        <label>$500:</label>
-                        <input type='number' name='pe500' id='pe500'>
-                    </div>
-                    <div class="form-group">
-                        <label>$1.000:</label>
-                        <input type='number' name='pe1000' id='pe1000'>
-                    </div>
-                    <div class="form-group">
-                        <label>$2.000:</label>
-                        <input type='number' name='pe2000' id='pe2000'>
-                    </div>
-                    <div class="form-group">
-                        <label>$10.000:</label>
-                        <input type='number' name='pe10000' id='pe10000'>
-                    </div>
-                </div>
-                <strong>Total Efectivo en Caja: $ </strong> <strong id='total_arqueo' style='color:green'></strong><br>
-                <input type="hidden" name="total_arqueo_input" id="total_arqueo_input">
-            </div>
+                <div class="table-container">
+                    <table>
+                        <tr>    
+                             <th colspan="4" scope="colgroup">Arqueos</th>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>Parcial 1</td>
+                            <td>Parcial 2</td>
+                            <td>Parcial 3</td>
+                        </tr>
+                        <tr>
+                            <td>$10:</td>
+                            <td><input type='number' name='pe101' id='pe101'></td>
+                            <td><input type='number' name='pe102' id='pe102'></td>
+                            <td><input type='number' name='pe103' id='pe103'></td>
+                        </tr>
+                        <tr>
+                            <td>$20:</td>
+                            <td><input type='number' name='pe201' id='pe201'></td>
+                            <td><input type='number' name='pe202' id='pe202'></td>
+                            <td><input type='number' name='pe203' id='pe203'></td>
+                        </tr>
+                        <tr>
+                            <td>$50:</td>
+                            <td><input type='number' name='pe501' id='pe501'></td>
+                            <td><input type='number' name='pe502' id='pe502'></td>
+                            <td><input type='number' name='pe503' id='pe503'></td>
+                        </tr>
+                        <tr>
+                            <td>$100:</td>
+                            <td><input type='number' name='pe1001' id='pe1001'></td>
+                            <td><input type='number' name='pe1002' id='pe1002'></td>
+                            <td><input type='number' name='pe1003' id='pe1003'></td>
+                        </tr>
+                        <tr>
+                            <td>$200:</td>
+                            <td><input type='number' name='pe2001' id='pe2001'></td>
+                            <td><input type='number' name='pe2002' id='pe2002'></td>
+                            <td><input type='number' name='pe2003' id='pe2003'></td>
+                        </tr>
+                        <tr>
+                            <td>$500:</td>
+                            <td><input type='number' name='pe5001' id='pe5001'></td>
+                            <td><input type='number' name='pe5002' id='pe5002'></td>
+                            <td><input type='number' name='pe5003' id='pe5003'></td>
+                        </tr>
+                        <tr>
+                            <td>$1.000:</td>
+                            <td><input type='number' name='pe10001' id='pe10001'></td>
+                            <td><input type='number' name='pe10002' id='pe10002'></td>
+                            <td><input type='number' name='pe10003' id='pe10003'></td>
+                        </tr>
+                        <tr>
+                            <td>$2.000:</td>
+                            <td><input type='number' name='pe20001' id='pe20001'></td>
+                            <td><input type='number' name='pe20002' id='pe20002'></td>
+                            <td><input type='number' name='pe20003' id='pe20003'></td>
+                        </tr>
+                        <tr>
+                            <td>$10.000:</td>
+                            <td><input type='number' name='pe100001' id='pe100001'></td>
+                            <td><input type='number' name='pe100002' id='pe100002'></td>
+                            <td><input type='number' name='pe100003' id='pe100003'></td>
+                        </tr>
+                        <tr>
+                            <td>$20.000:</td>
+                            <td><input type='number' name='pe200001' id='pe200001'></td>
+                            <td><input type='number' name='pe200002' id='pe200002'></td>
+                            <td><input type='number' name='pe200003' id='pe200003'></td>
+                        </tr>
+                        <tr>
+                            <td>Total Efectivo en Caja:</td>
+                            <td>
+                                <strong id='total_arqueo1' style='color:green'></strong> 
+                                <input type="hidden" name="total_arqueo_input1" id="total_arqueo_input1">       
+                            </td>
+                            <td>
+                                <strong id='total_arqueo2' style='color:green'></strong>
+                                <input type="hidden" name="total_arqueo_input2" id="total_arqueo_input2">       
+                            </td>
+                            <td>
+                                <strong id='total_arqueo3' style='color:green'></strong>
+                                <input type="hidden" name="total_arqueo_input3" id="total_arqueo_input3">       
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Diferencia Efectivo</td>
+                            <td>
+                                <strong id='dif_caja1'></strong>
+                                <input type="hidden" name="dif_caja_input1" id="dif_caja_input1">
+                            </td>
+                            <td>
+                                <strong id='dif_caja2'></strong>
+                                <input type="hidden" name="dif_caja_input2" id="dif_caja_input2">
+                            </td>
+                            <td>
+                                <strong id='dif_caja3'></strong>
+                                <input type="hidden" name="dif_caja_input3" id="dif_caja_input3">
+                            </td>
+                        </tr>
+                    </table>
 
-            <div id='resultado'>
-                <label>Diferencia Efectivo =</label><strong id='dif_caja'></strong><br>
-                <input type="hidden" name="dif_caja_input" id="dif_caja_input">
-            </div>
             <div id="contenedor_boton">
                 <input type='submit' name='enviar' id='enviar'>
             </div>
