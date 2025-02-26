@@ -42,11 +42,11 @@ label {
     color: #34495e;
 }
 select, input[type="date"], input[type="number"] {
-    width:max-content;
+    width: 80px;
     padding: 5px;
     border: 1px solid #bdc3c7;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 5px;
 }
 .section-title {
@@ -84,9 +84,55 @@ input[type="submit"]:hover {
     background-color: #2e63cc;
 }
 
+/* Contenedor de tabla responsivo */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Hacer la tabla más compacta */
+table {
+    width: 100%;
+    min-width: 300px; /* Ajustamos el mínimo */
+    border-collapse: collapse;
+    font-size: 13px; /* Reducimos tamaño de fuente */
+}
+
+th, td {
+    padding: 2px 5px; /* Menos espacio en celdas */
+    border: 1px solid #ddd;
+    text-align: center;
+    max-width: 10px; /* Limita el tamaño de cada celda */
+    overflow: hidden;
+}
+
+/* Reducir ancho de los inputs */
+table input[type="number"] {
+    width: 100%;
+    max-width: 90px; /* Ajustamos a un tamaño más reducido */
+    padding: 2px;
+    font-size: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7;
+}
+
+/* Reducimos aún más en pantallas pequeñas */
+@media (max-width: 480px) {
+    table {
+        font-size: 10px;
+    }
+    th, td {
+        padding: 2px;
+    }
+    table input[type="number"] {
+        max-width: 80px;
+    }
+}
+
 #ingreso_datos .container {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: 5px;
     
 }

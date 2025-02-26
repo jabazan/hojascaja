@@ -2,23 +2,68 @@ document.addEventListener("DOMContentLoaded", function () {
   fecha.max = new Date().toISOString().split("T")[0];
 
   function calcular_venta_ef() {
-    var cajaInicial = parseFloat(document.getElementById("vn_ci").value) || 0;
-    var parcialAnterior =
-      parseFloat(document.getElementById("par_ant").value) || 0;
-    var cierreZ = parseFloat(document.getElementById("vn_cz").value) || 0;
-    var gastos = parseFloat(document.getElementById("vn_ga").value) || 0;
-    var tarjetas = parseFloat(document.getElementById("vn_ta").value) || 0;
-    var mp = parseFloat(document.getElementById("vn_mp").value) || 0;
-    var proxDia = parseFloat(document.getElementById("vn_cpd").value) || 0;
+    var cajaInicial1 = parseFloat(document.getElementById("vn_ci1").value) || 0;
 
-    var ventaTotal = cierreZ - parcialAnterior;
-    var ventaEfectivo =
-      cierreZ -
-      parcialAnterior -
-      (cajaInicial + gastos + tarjetas + mp - proxDia);
-    document.getElementById("ventaTotal").innerText = ventaTotal.toFixed(2);
-    document.getElementById("venta_ef").innerText = ventaEfectivo.toFixed(2);
-    document.getElementById("venta_ef_input").value = ventaEfectivo.toFixed(2);
+
+    var parcialAnterior1 = parseFloat(document.getElementById("par_ant1").value) || 0;
+   
+    
+    var cierreZ1 = parseFloat(document.getElementById("vn_cz1").value) || 0;
+    var cierreZ2 = parseFloat(document.getElementById("vn_cz2").value) || 0;
+    var cierreZ3 = parseFloat(document.getElementById("vn_cz3").value) || 0;
+    
+    
+    
+    var gastos1 = parseFloat(document.getElementById("vn_ga1").value) || 0;
+    var gastos2 = parseFloat(document.getElementById("vn_ga2").value) || 0;
+    var gastos3 = parseFloat(document.getElementById("vn_ga3").value) || 0;
+    
+    var tarjetas1 = parseFloat(document.getElementById("vn_ta1").value) || 0;
+    var tarjetas2 = parseFloat(document.getElementById("vn_ta2").value) || 0;
+    var tarjetas3 = parseFloat(document.getElementById("vn_ta3").value) || 0;
+    
+    
+    var mp1 = parseFloat(document.getElementById("vn_mp1").value) || 0;
+    var mp2 = parseFloat(document.getElementById("vn_mp2").value) || 0;
+    var mp3 = parseFloat(document.getElementById("vn_mp3").value) || 0;
+    
+    
+    var proxDia1 = parseFloat(document.getElementById("vn_cpd1").value) || 0;
+    var proxDia2 = parseFloat(document.getElementById("vn_cpd2").value) || 0;
+    var proxDia3 = parseFloat(document.getElementById("vn_cpd3").value) || 0;
+
+    var cajaInicial2 = proxDia1;
+    var cajaInicial3 = proxDia2;
+
+    var parcialAnterior2 = cierreZ1;
+    var parcialAnterior3 = cierreZ2;
+
+    var ventaTotal1 = cierreZ1 - parcialAnterior1;
+    var ventaTotal2 = cierreZ2 - parcialAnterior2;
+    var ventaTotal3 = cierreZ3 - parcialAnterior3;
+    
+    var ventaEfectivo1 = (cierreZ1 - parcialAnterior1) - (cajaInicial1 + gastos1 + tarjetas1 + mp1 - proxDia1);
+    var ventaEfectivo2 = (cierreZ2 - parcialAnterior2) - (cajaInicial2 + gastos2 + tarjetas2 + mp2 - proxDia2);
+    var ventaEfectivo3 = (cierreZ3 - parcialAnterior3) - (cajaInicial3 + gastos3 + tarjetas3 + mp3 - proxDia3);
+    
+    document.getElementById("vn_ci2").innerText = cajaInicial2.toFixed(2);
+    document.getElementById("vn_ci3").innerText = cajaInicial3.toFixed(2);
+
+    document.getElementById("par_ant2").innerText = parcialAnterior2.toFixed(2);
+    document.getElementById("par_ant3").innerText = parcialAnterior3.toFixed(2);
+    
+    
+    document.getElementById("ventaTotal1").innerText = ventaTotal1.toFixed(2);
+    document.getElementById("ventaTotal2").innerText = ventaTotal2.toFixed(2);
+    document.getElementById("ventaTotal3").innerText = ventaTotal3.toFixed(2);
+
+    document.getElementById("venta_ef1").innerText = ventaEfectivo1.toFixed(2);
+    document.getElementById("venta_ef2").innerText = ventaEfectivo2.toFixed(2);
+    document.getElementById("venta_ef3").innerText = ventaEfectivo3.toFixed(2);
+
+    document.getElementById("venta_ef_input1").value = ventaEfectivo1.toFixed(2);
+    document.getElementById("venta_ef_input2").value = ventaEfectivo2.toFixed(2);
+    document.getElementById("venta_ef_input3").value = ventaEfectivo3.toFixed(2);
 
     calc_difCaja();
   }
