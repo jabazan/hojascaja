@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("dif_caja2").innerText = difCaja2.toFixed(2);
       document.getElementById("dif_caja_input2").value = difCaja2.toFixed(2);
 
-      if (difCaja1 < 0) {
+      if (difCaja2 < 0) {
         document.getElementById("dif_caja2").style.color = "red";
       } else {
         document.getElementById("dif_caja2").style.color = "green";
@@ -241,6 +241,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function calc_VentaTotalDia() {
+    // Obtener valores desde el DOM
+    var totalArqueo1 = parseFloat(document.getElementById("total_arqueo1").innerText) || 0;
+    var totalArqueo2 = parseFloat(document.getElementById("total_arqueo2").innerText) || 0;
+    var totalArqueo3 = parseFloat(document.getElementById("total_arqueo3").innerText) || 0;
+
+    var tarjetas1 = parseFloat(document.getElementById("vn_ta1").value) || 0;
+    var tarjetas2 = parseFloat(document.getElementById("vn_ta2").value) || 0;
+    var tarjetas3 = parseFloat(document.getElementById("vn_ta3").value) || 0;
+
+    var mp1 = parseFloat(document.getElementById("vn_mp1").value) || 0;
+    var mp2 = parseFloat(document.getElementById("vn_mp2").value) || 0;
+    var mp3 = parseFloat(document.getElementById("vn_mp3").value) || 0;
+
+    // Calcular Venta Total del Día
+    var VentaTotalDia = totalArqueo1 + tarjetas1 + mp1 + totalArqueo2 + tarjetas2 + mp2 + totalArqueo3 + tarjetas3 + mp3;
+
+    // Actualizar el HTML con el resultado
+    document.getElementById("ventaTotalDia").innerText = VentaTotalDia.toFixed(2);
+    document.getElementById("ventaTotalDia_input").value = VentaTotalDia.toFixed(2);
+}
+
+
+
   // Add event listeners to all input fields
   document.querySelectorAll(".ingreso_datos").forEach(function (element) {
     element.addEventListener("input", calcular_venta_ef);
@@ -254,8 +278,21 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("#arqueocaja input").forEach(function (element) {
     element.addEventListener("input", arqueo_caja);
   });
+//Calcular Dif
+  document.querySelectorAll("#sectorarqueo input[type='number']").forEach(function (element) {
+    element.addEventListener("input", calc_difCaja);
+  });
+  document.querySelectorAll("#sectorarqueo input[type='number']").forEach(function (element) {
+    element.addEventListener("input", calc_VentaTotalDia);
+  });
+  document.querySelectorAll(".ingreso_datos").forEach(function (element) {
+    element.addEventListener("input", calc_VentaTotalDia);
+  });
   
+
   // Initial calculation
   calcular_venta_ef();
   arqueo_caja();
+  calc_difCaja();
+  calc_VentaTotalDia();
 });
