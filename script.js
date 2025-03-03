@@ -39,10 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var ventaTotal2 = cierreZ2 - parcialAnterior2;
     var ventaTotal3 = cierreZ3 - parcialAnterior3;
     
-    // Calculate venta efectivo for each parcial
-    var ventaEfectivo1 = ventaTotal1 - (tarjetas1 + mp1);
-    var ventaEfectivo2 = ventaTotal2 - (tarjetas2 + mp2);
-    var ventaEfectivo3 = ventaTotal3 - (tarjetas3 + mp3);
+    // Calculate venta efectivo teorico
+    var ventaEfectivo1 = cajaInicial1 + ventaTotal1 - (tarjetas1 + mp1)- proxDia1 - gastos1;
+    var ventaEfectivo2 = cajaInicial2 + ventaTotal2 - (tarjetas2 + mp2) - proxDia2 - gastos2;
+    var ventaEfectivo3 = cajaInicial3+  ventaTotal3 - (tarjetas3 + mp3) - proxDia3 - gastos3;
     
     // Update the UI with calculated values
     document.getElementById("vn_ci2").innerText = cajaInicial2.toFixed(2);
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("total_arqueo3").innerText = totalArqueo3.toFixed(2);
     document.getElementById("total_arqueo_input3").value = totalArqueo3.toFixed(2);
     
-    // Calculate the total for the old single-column design (if it still exists)
+    /* // Calculate the total for the old single-column design (if it still exists)
     let pe10 = parseFloat(document.getElementById("pe10").value) || 0;
     let pe20 = parseFloat(document.getElementById("pe20").value) || 0;
     let pe50 = parseFloat(document.getElementById("pe50").value) || 0;
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (document.getElementById("total_arqueo_input")) {
       document.getElementById("total_arqueo_input").value = totalArqueo.toFixed(2);
-    }
+    } */
 
     // Recalculate the difference
     calc_difCaja();
